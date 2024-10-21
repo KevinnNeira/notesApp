@@ -1,0 +1,79 @@
+.notesContainer {
+  max-width: none !important;
+}
+
+.homeScreenEmpty {
+  border-radius: 30px;
+  background-color: #252525;
+  display: flex;
+  max-width: 480px;
+  width: 100%;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  gap: 40px 100px;
+}
+
+.title {
+  color: #fff;
+  font: 600 43px Nunito, sans-serif;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 21px;
+  flex: 1;
+  margin: auto 0;
+}
+
+.actionButton {
+  border-radius: 15px;
+  background-color: #3b3b3b;
+  display: flex;
+  width: 50px;
+  height: 50px;
+}
+
+.emptyStateImage {
+  aspect-ratio: 1.22;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  align-self: center;
+  margin-top: 177px;
+}
+
+.emptyStateText {
+  color: #fff;
+  align-self: center;
+  margin-top: 6px;
+  font: 300 20px Nunito, sans-serif;
+}
+
+.floatingActionButton {
+  background-color: #252525;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  align-self: flex-end;
+  display: flex;
+  margin-top: 174px;
+  width: 70px;
+  height: 70px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
