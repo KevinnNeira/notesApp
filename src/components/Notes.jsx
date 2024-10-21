@@ -1,6 +1,7 @@
 import React from "react";
 import styles from '../styles/Notes.module.css';
 import ActionButton from './ActionButton';
+import add from '../../public/add.svg'
 
 export const Notes = () => {
   return (
@@ -20,7 +21,8 @@ export const Notes = () => {
           alt="Empty state illustration"
         />
         <p className={styles.emptyStateText}>Create your first note !</p>
-        <button 
+        <button
+          src={add}
           className={styles.floatingActionButton} 
           aria-label="Create new note"
         />
