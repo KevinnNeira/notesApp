@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './Notes.module.css';
+import styles from '../styles/Notes.module.css';
 import ActionButton from './ActionButton';
 
 export const Notes = () => {
