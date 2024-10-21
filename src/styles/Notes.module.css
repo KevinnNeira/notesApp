@@ -1,15 +1,14 @@
-.notesContainer {
-  max-width: 100%;
-  max-height: 100%;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  
-  .homeScreenEmpty {
-    background-color: red;
+.homeScreenEmpty {
+    background-color: #252525;
     display: flex;
-    height: 94vh;
-    width: 98vw;
+    height: 100vh;
+    width: 100vw;
     flex-direction: column;
-    margin: 0 auto;
     padding: 32px 16px;
   }
   
@@ -44,7 +43,7 @@
     aspect-ratio: 1.22;
     object-fit: contain;
     object-position: center;
-    width: 700px;
+    width: 60vh;
     align-self: center;
     margin-top: 32px;
   }
@@ -62,9 +61,9 @@
     border-radius: 50%;
     align-self: flex-end;
     display: flex;
-    margin-top: 32px;
-    width: 56px;
-    height: 56px;
+    margin-top: 20vh;
+    width: 50px;
+    height: 52px;
   }
   
   .visually-hidden {
