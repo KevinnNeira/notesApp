@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const user = express();
 
-user.use(cors({
+user.get(cors({
   origin: 'http://localhost:5173'
 }));
 
