@@ -57,6 +57,7 @@
   
   .floatingActionButton {
     background-color: #252525;
+    background-image: url(../../public/add.svg);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
     border-radius: 50%;
     align-self: flex-end;

@@ -2,6 +2,10 @@ import React from "react";
 import styles from '../styles/Notes.module.css';
 import ActionButton from './ActionButton';
 import add from '../../public/add.svg'
+import image from '../../public/image.png' 
+import zoom from '../../public/search.svg'
+import info from '../../public/info_outline.svg'
+
 
 export const Notes = () => {
   return (
@@ -10,13 +14,13 @@ export const Notes = () => {
         <header className={styles.header}>
           <h1 className={styles.title}>Notes</h1>
           <div className={styles.buttonContainer}>
-            <ActionButton />
-            <ActionButton />
+          <ActionButton/>
+          <ActionButton/>
           </div>
         </header>
         <img 
           loading="lazy" 
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/af8f9a2550cc53a17036188568fc58f517ad39267ed7360bc0d9aaf6a02d4285?placeholderIfAbsent=true&apiKey=f0a6d086379646449df0b08f79e5b0b6" 
+          src={image}
           className={styles.emptyStateImage} 
           alt="Empty state illustration"
         />
