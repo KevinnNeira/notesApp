@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from '../../public/bloc.png';
 
 export const Login = () => {
     const [email, setEmail] = useState('');
@@ -14,6 +15,10 @@ export const Login = () => {
 
     return (
         <form className="form" onSubmit={handleSubmit}>
+            <div className="contenedor__logo">
+            <img id='logo' src={logo} alt=""/>
+            <h1 id='name'>Notes app ui</h1>
+            </div>
             <div className="flex-column">
                 <label>Email</label>
             </div>

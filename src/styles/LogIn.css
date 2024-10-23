@@ -113,5 +113,15 @@
     border: 1px solid #2d79f3;
     ;
   }
-  
-      
+.contenedor__logo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+#name{
+  font-size: 4vh;
+}
+#logo{
+  width: 15vh;
+}
