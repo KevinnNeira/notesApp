@@ -1,0 +1,62 @@
+.content-editor {
+    background-color: rgba(37, 37, 37, 1);
+    padding: 3vh;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    width: 100%;
+    padding-left: 10px;
+    flex-direction: column;
+  }
+  
+  .header-container {
+    align-self: center;
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-family: Nunito, sans-serif;
+    color: rgba(154, 154, 154, 1);
+    font-weight: 400;
+  }
+  
+  .action-button {
+    border-radius: 15px;
+    background-color: rgba(59, 59, 59, 1);
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .keyboard-title {
+    font-size: 48px;
+    margin-top: 40px;
+  }
+  
+  .input-placeholder {
+    background-color: rgba(37, 37, 37, 1);
+    border: none;
+    font-size: 25px;
+    align-self: stretch;
+    margin-top: 58px;
+  }
+  
+  .button-group {
+    align-self: start;
+    display: flex;
+    gap: 21px;
+  }

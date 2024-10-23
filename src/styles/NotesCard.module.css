@@ -8,7 +8,7 @@
     display: flex;
     width: 100%;
     flex-direction: column;
-
+    height: 100%;
     padding: 47px 24px 112px;
   }
   
@@ -77,11 +77,16 @@
   
   .avatarPlaceholder {
     background-color: #252525;
+    position: fixed;
+    z-index: 1;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
     border-radius: 50%;
     width: 70px;
     height: 70px;
-    margin-top: 8px;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 5vh;
+    margin-right: 3vh;
   }
   
   .purpleCard {
