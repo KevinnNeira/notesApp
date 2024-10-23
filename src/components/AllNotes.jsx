@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from '../styles/NotesCard.module.css';
 import NoteCard from './NoteCard';
 import add from '../../public/add.svg'
@@ -17,6 +18,11 @@ export const Cards = () => {
     },
     { content: 'List of free & open source apps', color: 'purple' }
   ];
+  const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/content');
+    };
   return (
     <main className={styles.homeScreen}>
       <header className={styles.header}>
@@ -40,8 +46,8 @@ export const Cards = () => {
             extraContent={note.extraContent}
           />
         ))}
-        <div className={styles.avatarPlaceholder}>
-          <img id='image__button' src={add} alt="Descripción de la imagen" />
+        <div className={styles.avatarPlaceholder} onClick={handleClick}>
+            <img id='image__button' src={add} alt="Descripción de la imagen" />
         </div>
 
       </section>

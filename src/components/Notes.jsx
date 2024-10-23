@@ -3,11 +3,18 @@ import styles from '../styles/Notes.module.css';
 import ActionButton from './ActionButton';
 import add from '../../public/add.svg'
 import image from '../../public/image.png' 
+import { useNavigate } from 'react-router-dom';
 import zoom from '../../public/search.svg'
 import info from '../../public/info_outline.svg'
 
 
 export const Notes = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/content')
+  }
+
   return (
     <main className={styles.notesContainer}>
       <section className={styles.homeScreenEmpty}>
@@ -25,11 +32,7 @@ export const Notes = () => {
           alt="Empty state illustration"
         />
         <p className={styles.emptyStateText}>Create your first note !</p>
-        <button
-          src={add}
-          className={styles.floatingActionButton} 
-          aria-label="Create new note"
-        />
+        <button src={add} className={styles.floatingActionButton} aria-label="Create new note" onClick={handleClick}/>
       </section>
     </main>
   );
