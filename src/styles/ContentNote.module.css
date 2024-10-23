@@ -42,14 +42,20 @@
     cursor: pointer;
   }
   
-  .keyboard-title {
+  .content-title {
+    background-color: rgba(37, 37, 37, 1);
     font-size: 48px;
+    outline: none;
+    border: none;
+    color: rgba(154, 154, 154, 1);
     margin-top: 40px;
   }
   
   .input-placeholder {
     background-color: rgba(37, 37, 37, 1);
+    outline: none;
     border: none;
+    color: rgba(154, 154, 154, 1);
     font-size: 25px;
     align-self: stretch;
     margin-top: 58px;
