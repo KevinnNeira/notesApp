@@ -87,8 +87,18 @@
     right: 0;
     margin-bottom: 5vh;
     margin-right: 3vh;
-  }
-  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#image__button {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
   .purpleCard {
     background-color: #b69cff;
   }
