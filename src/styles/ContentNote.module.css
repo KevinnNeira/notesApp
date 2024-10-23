@@ -36,12 +36,16 @@
     border-radius: 15px;
     background-color: rgba(59, 59, 59, 1);
     display: flex;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
   }
-  
+
   .content-title {
     background-color: rgba(37, 37, 37, 1);
     font-size: 48px;
@@ -62,7 +66,12 @@
   }
   
   .button-group {
-    align-self: start;
     display: flex;
     gap: 21px;
+  }
+
+  #image__menu__note{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
