@@ -1,22 +1,24 @@
-const {connectMongodb} = require('../connect/connect')
+const { connectMongodb } = require('../connect/connect');
 const express = require('express');
 const cors = require('cors');
 const user = express();
 
-user.get(cors({
-  origin: 'http://localhost:5173'
+user.use(cors({
+  origin: 'http://localhost:5173',
+  methods: ['GET', 'POST'],
 }));
 
+user.use(express.json());
 user.get('/getNotes', async (req, res) => {
     const db = await connectMongodb();
-    const collection = db.collection('notes')
+    const collection = db.collection('notes');
     let { accion } = req.query;
-    res.status(200).json(await collection.find().project().toArray())
+    res.status(200).json(await collection.find().project().toArray());
 });
 
-user.post('/insertUser', express.json(), async (req, res) => {
+user.post('/users', async (req, res) => {
     const db = await connectMongodb();
-    const collection = db.collection('usuarios')
+    const collection = db.collection('users');
     const { Username, Email, Password } = req.body;
 
     if (!Username || !Email || !Password) {
@@ -39,11 +41,12 @@ user.post('/insertUser', express.json(), async (req, res) => {
 });
 
 let config = { 
-    port: "3000",
+    port: 3000,
     host: "localhost"
-}
-user.listen(config, ()=>{
-    console.log(`http://localhost:3000`);
-})
+};
+
+user.listen(config.port, () => {
+    console.log(`Server running at http://${config.host}:${config.port}`);
+});
 
 module.exports = user;
