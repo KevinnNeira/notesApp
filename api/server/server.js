@@ -62,6 +62,19 @@ user.post('/users/login', async (req, res) => {
         return res.status(500).json({ message: "An error occurred during login" });
     }
 });
+user.get('/getNotes', async (req, res) => {
+    const db = await connectMongodb();
+    const collection = db.collection('notes');
+
+    try {
+        const notes = await collection.find().toArray();
+        res.status(200).json(notes);
+        console.log(notes)
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Error al obtener las notas" });
+    }
+});
 
 let config = { 
     port: 3000,
