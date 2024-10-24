@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import '../styles/Notes.module.css'
 import '../styles/LogIn.css'
 import '../styles/NotesCard.module.css'
+import '../styles/SignUp.css'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
