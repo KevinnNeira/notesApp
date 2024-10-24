@@ -21,7 +21,9 @@ export const Notes = () => {
         <header className={styles.header}>
           <h1 className={styles.title}>Notes</h1>
           <div className={styles.buttonContainer}>
-          <ActionButton/>
+          <button className={styles.actionButton} aria-label="Action button">
+            <img src={zoom} />
+          </button>
           <ActionButton/>
           </div>
         </header>
