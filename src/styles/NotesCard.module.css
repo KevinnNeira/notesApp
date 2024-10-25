@@ -118,9 +118,6 @@
     border: 0;
   }
 
-.pink {
-  background-color: #FFB3BA;
-}
 
 .red {
   background-color: #ffbf77;
@@ -132,7 +129,7 @@
 }
 
 .Terracota {
-  background-color: rgba(255, 255, 154, 0.822)A;
+  background-color: rgba(255, 255, 154, 0.822);
 
 }
 
@@ -142,4 +139,8 @@
 
 .Oliva {
   background-color: #8B8B5B;
+}
+
+.blanco {
+  background-color: #ffffff;
 }

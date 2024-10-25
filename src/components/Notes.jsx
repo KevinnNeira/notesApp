@@ -26,6 +26,7 @@ export const Notes = () => {
     };
 
     fetchNotes();
+
   }, []);
 
   const handleClick = () => {
@@ -45,7 +46,7 @@ export const Notes = () => {
           </div>
         </header>
         {notes.length > 0 ? (
-          <Cards notes={notes} />
+          <Cards notes={notes}/>
         ) : (
           <>
             <img 

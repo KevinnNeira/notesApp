@@ -35,7 +35,7 @@ export const ContentNote = () => {
                     </button>
 
                         <input type="text" className={styles['content-title']} placeholder="Title" value={title} onChange={handleTitleChange} />
-                        <input type="text" className={styles['input-placeholder']} placeholder="Type something..." value={value} onFocus={handleFocus} onChange={handleChange} />
+                        <textarea type="text" className={styles['input-placeholder']} placeholder="Type something..." value={value} onFocus={handleFocus} onChange={handleChange} />
                     </div>
                     <div className={styles['button-group']}>
                     <button className={styles['action-button']} aria-label="Action 1">

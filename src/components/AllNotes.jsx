@@ -13,21 +13,20 @@ export const Cards = ({ notes }) => {
   const earthColors = [
     'Beige',
     'Terracota',
-    'Ocre',
     'Oliva',
     'cyan',
     'red',
-    'Beige',
     'Terracota',
-    'Ocre',
     'Oliva',
     'cyan',
+    'red',
+    'red',
     'red'
   ];
 
   const getRandomColor = () => {
     const randomIndex = Math.floor(Math.random() * earthColors.length);
-    return earthColors[randomIndex];
+      return earthColors[randomIndex];
   };
 
   return (
@@ -35,7 +34,7 @@ export const Cards = ({ notes }) => {
       <section>
         {notes.length > 0 ? (
           notes.map((note, index) => (
-            <NoteCard
+            <NoteCard 
               key={index}
               content={note.titulo}
               color={getRandomColor()}
