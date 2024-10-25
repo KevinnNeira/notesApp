@@ -1,29 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '../styles/NotesCard.module.css';
 import NoteCard from './NoteCard';
 import add from '../../public/add.svg';
 
-export const Cards = () => {
-  const [notes, setNotes] = useState([]);
+export const Cards = ({ notes }) => {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const fetchNotes = async () => {
-      try {
-        const response = await fetch('http://localhost:3000/getNotes');
-        const data = await response.json();
-        setNotes(data);
-      } catch (error) {
-        console.error('Error fetching notes:', error);
-      }
-    };
-
-    fetchNotes();
-  }, []);
-
   const handleClick = () => {
     navigate('/content');
+  };
+
+  const earthColors = [
+    'Beige',
+    'Terracota',
+    'Ocre',
+    'Oliva',
+    'cyan',
+    'red',
+    'Beige',
+    'Terracota',
+    'Ocre',
+    'Oliva',
+    'cyan',
+    'red'
+  ];
+
+  const getRandomColor = () => {
+    const randomIndex = Math.floor(Math.random() * earthColors.length);
+    return earthColors[randomIndex];
   };
 
   return (
@@ -33,8 +37,8 @@ export const Cards = () => {
           notes.map((note, index) => (
             <NoteCard
               key={index}
-              content={note.content}
-              color={note.color}
+              content={note.titulo}
+              color={getRandomColor()}
             />
           ))
         ) : (

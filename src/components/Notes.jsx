@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from '../styles/Notes.module.css';
 import ActionButton from './ActionButton';
-import add from '../../public/add.svg';
 import image from '../../public/image.png'; 
 import { useNavigate } from 'react-router-dom';
 import zoom from '../../public/search.svg';
@@ -19,7 +18,8 @@ export const Notes = () => {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        setNotes(data); // Actualiza el estado con las notas obtenidas
+        setNotes(data);
+        console.log("Fetched notes:", data);
       } catch (error) {
         console.error("Error fetching notes:", error);
       }
@@ -45,7 +45,7 @@ export const Notes = () => {
           </div>
         </header>
         {notes.length > 0 ? (
-          <Cards notes={notes} /> // Suponiendo que Cards acepte una prop `notes`
+          <Cards notes={notes} />
         ) : (
           <>
             <img 

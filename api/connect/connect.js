@@ -5,6 +5,5 @@ exports.connectMongodb = async()=>{
     const usuario = new MongoClient(url)
     await usuario.connect();
     const db = usuario.db('notes');
-    console.log(db);
     return db;
 }
