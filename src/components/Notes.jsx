@@ -26,11 +26,10 @@ export const Notes = () => {
     };
 
     fetchNotes();
-
   }, []);
 
-  const handleClick = () => {
-    navigate('/content');
+  const handleCardClick = (note) => {
+    navigate('/content', { state: { title: note.titulo, content: note.contenido } });
   };
 
   return (
@@ -46,7 +45,7 @@ export const Notes = () => {
           </div>
         </header>
         {notes.length > 0 ? (
-          <Cards notes={notes}/>
+          <Cards notes={notes} onCardClick={handleCardClick} />
         ) : (
           <>
             <img 

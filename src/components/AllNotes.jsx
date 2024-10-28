@@ -4,8 +4,9 @@ import styles from '../styles/NotesCard.module.css';
 import NoteCard from './NoteCard';
 import add from '../../public/add.svg';
 
-export const Cards = ({ notes }) => {
+export const Cards = ({ notes, onCardClick }) => {
   const navigate = useNavigate();
+
   const handleClick = () => {
     navigate('/content');
   };
@@ -26,19 +27,24 @@ export const Cards = ({ notes }) => {
 
   const getRandomColor = () => {
     const randomIndex = Math.floor(Math.random() * earthColors.length);
-      return earthColors[randomIndex];
+    return earthColors[randomIndex];
   };
 
   return (
     <main className={styles.homeScreen}>
       <section>
         {notes.length > 0 ? (
-          notes.map((note, index) => (
-            <NoteCard 
-              key={index}
-              content={note.titulo}
-              color={getRandomColor()}
-            />
+          notes.map((note) => (
+            <div 
+              key={note._id} 
+              onClick={() => onCardClick(note)} 
+              className={styles.card}
+            >
+              <NoteCard 
+                content={note.titulo}
+                color={getRandomColor()}
+              />
+            </div>
           ))
         ) : (
           <p>No notes available.</p>

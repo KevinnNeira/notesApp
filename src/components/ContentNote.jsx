@@ -1,66 +1,82 @@
 import React, { useState } from 'react';
 import styles from '../styles/ContentNote.module.css';
 import save from '../../public/save.svg';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import visibility from '../../public/visibility.svg';
 import back from '../../public/Vector.svg';
 import { saveNote } from '../../api/js/modules/noteService';
 
 export const ContentNote = () => {
-    const navigate = useNavigate();
-    const [titulo, setTitle] = useState('');
-    const [value, setValue] = useState('');
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { title = '', content = '' } = location.state || {}; // Obtener el título y contenido
 
-    const handleFocus = () => {
-        setValue('');
-    };
+  const [titulo, setTitle] = useState(title);
+  const [value, setValue] = useState(content);
 
-    const handleChange = (e) => {
-        setValue(e.target.value);
-    };
+  const handleFocus = () => {
+    setValue('');
+  };
 
-    const handleTitleChange = (e) => {
-        setTitle(e.target.value);
-    };
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
 
-    const handleClick = () => {
-        navigate('/cards');
-    };
+  const handleTitleChange = (e) => {
+    setTitle(e.target.value);
+  };
 
-    const handleSave = async () => {
-        try {
-            const savedNote = await saveNote(titulo, value);
-            console.log('Nota guardada:', savedNote);
-            navigate('/cards');
-        } catch (error) {
-            console.error('Error guardando la nota:', error);
-        }
-    };
+  const handleClick = () => {
+    navigate('/cards');
+  };
 
-    return (
-        <main className={styles['content-editor']}>
-            <section className={styles['content-wrapper']}>
-                <header className={styles['header-container']}>
-                    <div className={styles['text-container']}>
-                        <button className={styles['action-button']} aria-label="Menu" onClick={handleClick}>
-                            <img id='image__menu__note' src={back} alt="Menu" />
-                        </button>
+  const handleSave = async () => {
+    try {
+      const savedNote = await saveNote(titulo, value);
+      console.log('Nota guardada:', savedNote);
+      navigate('/cards');
+    } catch (error) {
+      console.error('Error guardando la nota:', error);
+    }
+  };
 
-                        <input type="text" className={styles['content-title']} placeholder="Title" value={titulo} onChange={handleTitleChange} />
-                        <textarea type="text" className={styles['input-placeholder']} placeholder="Type something..." value={value} onFocus={handleFocus} onChange={handleChange} />
-                    </div>
-                    <div className={styles['button-group']}>
-                        <button className={styles['action-button']} aria-label="Action 1">
-                            <img src={visibility} alt="Descripción 1" />
-                        </button>
-                        <button className={styles['action-button']} aria-label="Save" onClick={handleSave}>
-                            <img src={save} alt="Descripción 2" />
-                        </button>
-                    </div>
-                </header>
-            </section>
-        </main>
-    );
+  return (
+    <main className={styles['content-editor']}>
+      <section className={styles['content-wrapper']}>
+        <header className={styles['header-container']}>
+          <div className={styles['text-container']}>
+            <button className={styles['action-button']} aria-label="Menu" onClick={handleClick}>
+              <img id='image__menu__note' src={back} alt="Menu" />
+            </button>
+
+            <input
+              type="text"
+              className={styles['content-title']}
+              placeholder="Title"
+              value={titulo}
+              onChange={handleTitleChange}
+            />
+            <textarea
+              type="text"
+              className={styles['input-placeholder']}
+              placeholder="Type something..."
+              value={value}
+              onFocus={handleFocus}
+              onChange={handleChange}
+            />
+          </div>
+          <div className={styles['button-group']}>
+            <button className={styles['action-button']} aria-label="Action 1">
+              <img src={visibility} alt="Descripción 1" />
+            </button>
+            <button className={styles['action-button']} aria-label="Save" onClick={handleSave}>
+              <img src={save} alt="Descripción 2" />
+            </button>
+          </div>
+        </header>
+      </section>
+    </main>
+  );
 };
 
 export default ContentNote;
