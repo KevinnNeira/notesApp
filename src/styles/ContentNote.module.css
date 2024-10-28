@@ -79,3 +79,24 @@
     height: 100%;
     object-fit: cover;
   }
+  .searchInput {
+    margin-right: 10px;
+    padding: 8px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  .titleContainer {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #title{
+    width: 200px;
+  }
+  
+  
