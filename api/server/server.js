@@ -16,6 +16,28 @@ user.get('/getNotes', async (req, res) => {
     res.status(200).json(await collection.find().project().toArray());
 });
 
+user.post('/notes', async (req, res) => {
+    const db = await connectMongodb();
+    const collection = db.collection('notes');
+    const { titulo, contenido } = req.body;
+
+    if (!titulo || !contenido) {
+        return res.status(400).json({ message: "Title and content are required" });
+    }
+
+    const newNote = {
+        titulo,
+        contenido
+    };
+    try {
+        const result = await collection.insertOne(newNote);
+        res.status(201).json(result);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Error al guardar la nota" });
+    }
+});
+
 user.post('/users', async (req, res) => {
     const db = await connectMongodb();
     const collection = db.collection('users');
