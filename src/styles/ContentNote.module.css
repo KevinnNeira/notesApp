@@ -65,7 +65,6 @@
     font-size: 25px;
     align-self: stretch;
     width: 100%;
-
     margin-top: 58px;
   }
   
@@ -79,14 +78,17 @@
     height: 100%;
     object-fit: cover;
   }
+
   .searchInput {
-    margin-right: 10px;
+    margin-top: 10px;
+    background: rgb(37, 37, 37);
     padding: 8px;
-    width: 80%;
-    border: 1px solid #ccc;
+    width: 80vw;
+    border: none;
     border-radius: 4px;
     flex-shrink: 0;
   }
+  
 
   .titleContainer {
     width: 80vw;
@@ -95,8 +97,5 @@
     gap: 10px;
   }
 
-  #title{
-    width: 200px;
-  }
   
   

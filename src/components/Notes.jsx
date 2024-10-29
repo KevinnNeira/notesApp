@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from '../styles/Notes.module.css';
+import '../styles/NotesCard.module.css'
 import ActionButton from './ActionButton';
 import image from '../../public/image.png'; 
 import { useNavigate } from 'react-router-dom';

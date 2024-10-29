@@ -19,12 +19,6 @@
     align-items: center;
     margin-bottom: 37px;
   }
-  
-  .title {
-    color: #fff;
-    font: 600 43px Nunito, sans-serif;
-  }
-  
   .buttonGroup {
     display: flex;
     gap: 21px;

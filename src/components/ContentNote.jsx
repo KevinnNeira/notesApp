@@ -9,10 +9,11 @@ import { saveNote } from '../../api/js/modules/noteService';
 export const ContentNote = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { title = '', content = '' } = location.state || {}; // Obtener el título y contenido
+  const { title = '', content = '' } = location.state || {};
 
   const [titulo, setTitle] = useState(title);
   const [value, setValue] = useState(content);
+  const [searchTerm, setSearchTerm] = useState('');
 
   const handleFocus = () => {
     setValue('');
@@ -24,6 +25,10 @@ export const ContentNote = () => {
 
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
+  };
+
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
   };
 
   const handleClick = () => {

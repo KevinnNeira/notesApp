@@ -83,3 +83,10 @@
     white-space: nowrap;
     border: 0;
   }
+
+  .title {
+    color: #fff;
+    font: 600 43px Nunito, sans-serif;
+    width: 85vw;
+  }
+  
