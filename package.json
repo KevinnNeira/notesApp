@@ -1,15 +1,18 @@
 {
   "name": "notesapp",
   "private": true,
+  "homepage": "https://kevinnneira.github.io/notesApp/",
   "version": "0.0.0",
   "type": "commonjs",
   "scripts": {
     "dev": "vite",
     "server": "node --watch api/server/server.js",
     "project": "concurrently \"npm run server\" \"npm run dev\"",
-    "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "axios": "^1.7.7",
