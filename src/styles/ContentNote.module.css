@@ -81,21 +81,14 @@
 
   .searchInput {
     margin-top: 10px;
+    width: 85vw;
+    flex: 1;
     background: rgb(37, 37, 37);
     padding: 8px;
     width: 80vw;
     border: none;
     border-radius: 4px;
-    flex-shrink: 0;
   }
   
-
-  .titleContainer {
-    width: 80vw;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
   
   

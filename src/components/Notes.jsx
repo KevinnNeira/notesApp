@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from '../styles/Notes.module.css';
-import '../styles/NotesCard.module.css'
+import styles2 from '../styles/ContentNote.module.css'
 import ActionButton from './ActionButton';
 import image from '../../public/image.png'; 
 import { useNavigate } from 'react-router-dom';
@@ -52,7 +52,7 @@ export const Notes = () => {
     {showSearch ? (
       <input
         type="text"
-        className={styles.searchInput}
+        className={styles2.searchInput}
         placeholder="Search notes..."
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
