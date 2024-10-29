@@ -8,7 +8,9 @@ import '../styles/NotesCard.module.css'
 import '../styles/SignUp.css'
 
 createRoot(document.getElementById('root')).render(
+  <StrictMode>
   <BrowserRouter>
     <AppRouter />
   </BrowserRouter>,
+  </StrictMode>
 )
