@@ -32,7 +32,7 @@ export const ContentNote = () => {
   };
 
   const handleClick = () => {
-    navigate('/cards');
+    navigate('/notesApp/home');
   };
 
   const handleSave = async () => {
