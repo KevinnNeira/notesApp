@@ -7,10 +7,10 @@ import { SignUp } from '../components/SignUp';
 export const AppRouter = () => {
     return(
         <Routes>
-            <Route path='/' element={<SignUp/>}/>
-            <Route path='/login' element={<Login/>}/>
-            <Route path='/home' element={<Notes/>}/>
-            <Route path='/content' element={<ContentNote/>}/>
+            <Route path='notesApp/' element={<SignUp/>}/>
+            <Route path='notesApp/login' element={<Login/>}/>
+            <Route path='notesApp/home' element={<Notes/>}/>
+            <Route path='notesApp/content' element={<ContentNote/>}/>
         </Routes>
     )
 }
