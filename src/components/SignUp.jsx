@@ -23,7 +23,7 @@ export const SignUp = () => {
             Password: password,
         };
 
-        const response = await fetch('http://localhost:3000/users', {
+        const response = await fetch('https://notes-app-drab-nine.vercel.app/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

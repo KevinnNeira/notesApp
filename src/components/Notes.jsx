@@ -16,7 +16,7 @@ export const Notes = () => {
   useEffect(() => {
     const fetchNotes = async () => {
       try {
-        const response = await fetch('http://localhost:3000/getNotes');
+        const response = await fetch('https://notes-app-drab-nine.vercel.app/getNotes');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
