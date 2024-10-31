@@ -108,7 +108,7 @@ export const SignUp = () => {
             <button className="button-submit">Create Account</button>
             <p className="p">
                 Already have an account? 
-                <a href="/login">
+                <a href="/notesApp/login">
                     <span className="span">Sign In</span>
                 </a>
             </p>
