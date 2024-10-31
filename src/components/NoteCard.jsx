@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const NoteCard = ({ content, color }) => {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate('/content');
+    navigate('/notesApp/content');
   };
   const cardClass = `${styles.noteCard} ${styles[color]}`;
 

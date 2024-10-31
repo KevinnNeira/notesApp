@@ -34,7 +34,7 @@ export const SignUp = () => {
         if (response.ok) {
             const data = await response.json();
             console.log('User created:', data);
-            navigate('/login');
+            navigate('/notesApp/login');
         } else {
             const errorData = await response.json();
             console.error('Error:', errorData.message);

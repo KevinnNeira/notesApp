@@ -1,6 +1,5 @@
 import React from "react";
 import styles from '../styles/Notes.module.css';
-import zoom from '../../public/search.svg'
 import info from '../../public/info_outline.svg'
 
 

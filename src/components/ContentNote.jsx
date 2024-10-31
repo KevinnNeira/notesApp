@@ -39,7 +39,7 @@ export const ContentNote = () => {
     try {
       const savedNote = await saveNote(titulo, value);
       console.log('Nota guardada:', savedNote);
-      navigate('/cards');
+      navigate('/notesApp/home');
     } catch (error) {
       console.error('Error guardando la nota:', error);
     }

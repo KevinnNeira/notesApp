@@ -32,7 +32,7 @@ export const Notes = () => {
   }, []);
 
   const handleCardClick = (note) => {
-    navigate('/content', { state: { title: note.titulo, content: note.contenido } });
+    navigate('/notesApp/content', { state: { title: note.titulo, content: note.contenido } });
   };
 
   const handleSearchToggle = () => {
