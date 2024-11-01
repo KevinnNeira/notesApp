@@ -9,7 +9,7 @@ export const Login = () => {
     const [error, setError] = useState('');
     const navigate = useNavigate();
     const handleClick = () =>{
-        navigate('/notesApp/home')   
+        navigate('/home')   
     }
 
     const handleSubmit = async (e) => {

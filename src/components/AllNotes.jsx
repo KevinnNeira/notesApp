@@ -8,7 +8,7 @@ export const Cards = ({ notes, onCardClick }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/notesApp/content');
+    navigate('/content');
   };
 
   const earthColors = [

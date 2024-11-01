@@ -32,14 +32,14 @@ export const ContentNote = () => {
   };
 
   const handleClick = () => {
-    navigate('/notesApp/home');
+    navigate('/home');
   };
 
   const handleSave = async () => {
     try {
       const savedNote = await saveNote(titulo, value);
       console.log('Nota guardada:', savedNote);
-      navigate('/notesApp/home');
+      navigate('/home');
     } catch (error) {
       console.error('Error guardando la nota:', error);
     }

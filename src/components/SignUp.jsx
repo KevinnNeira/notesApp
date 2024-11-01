@@ -34,7 +34,7 @@ export const SignUp = () => {
         if (response.ok) {
             const data = await response.json();
             console.log('User created:', data);
-            navigate('/notesApp/login');
+            navigate('/login');
         } else {
             const errorData = await response.json();
             console.error('Error:', errorData.message);
@@ -108,7 +108,7 @@ export const SignUp = () => {
             <button className="button-submit">Create Account</button>
             <p className="p">
                 Already have an account? 
-                <a href="/notesApp/login">
+                <a href="/login">
                     <span className="span">Sign In</span>
                 </a>
             </p>
